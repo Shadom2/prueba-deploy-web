@@ -2,18 +2,67 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Examen Parcial 3 GitHub Actions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen GitHub Actions</title>
     <style>
-        body { font-family: sans-serif; background-color: #f0f0f0; text-align: center; padding: 50px; }
-        .card { background: white; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; }
-        p { color: #666; }
+        body {
+            /* Fuente limpia y moderna */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Fondo Celeste suave (tipo institucional) */
+            background-color: #e3f2fd; 
+            margin: 0;
+            padding: 0;
+            /* Centrar la tarjeta en la pantalla */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            background-color: white;
+            width: 80%;
+            max-width: 600px; /* Que no se estire demasiado */
+            padding: 40px;
+            /* Detalle de diseño: borde azul fuerte a la izquierda */
+            border-left: 8px solid #1565c0; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombrita suave */
+            border-radius: 5px;
+            text-align: left; /* TEXTO A LA IZQUIERDA */
+        }
+        h1 {
+            color: #0d47a1; /* Azul oscuro para el título */
+            margin-top: 0;
+            font-size: 2em;
+        }
+        p {
+            color: #333;
+            line-height: 1.6; /* Espaciado para que se lea fácil */
+            font-size: 1.1em;
+        }
+        .info-box {
+            background-color: #f5f5f5;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #555;
+        }
     </style>
 </head>
 <body>
+
     <div class="card">
         <h1>Prueba de Despliegue</h1>
-        <p><b>Autor:</b>Pablo Brito Ch.</p>
+        
+        <p>Hola profe, esta es la evidencia de mi examen práctico.</p>
+        
+        <p>Este sitio web fue desplegado automáticamente usando <strong>GitHub Actions</strong>. Para lograrlo, configuré un flujo de trabajo que utiliza un Token Personal (PAT) guardado en los <em>Secrets</em> del repositorio, garantizando seguridad en el proceso.</p>
+
+        <div class="info-box">
+            <p><b>Estudiante:</b> [Tu Nombre Aquí]</p>
+            <p><b>Estado del Deploy:</b> Exitoso ✅</p>
+        </div>
     </div>
+
 </body>
 </html>
