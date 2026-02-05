@@ -1,0 +1,24 @@
+name: Deploy Website con Token
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Bajamos el código (Checkout)
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.DEPLOY_TOKEN }}
+      # 2. Desplegamos a GitHub Pages usando el Token
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.DEPLOY_TOKEN }}
+          branch: gh-pages
+          folder: .
